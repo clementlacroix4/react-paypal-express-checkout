@@ -87,8 +87,10 @@
 
             var _this = _possibleConstructorReturn(this, (PaypalButton.__proto__ || Object.getPrototypeOf(PaypalButton)).call(this, props));
 
-            window.React = _react2.default;
-            window.ReactDOM = _reactDom2.default;
+            if (window !== `undefined`) {
+                window.React = _react2.default;
+                window.ReactDOM = _reactDom2.default;
+            }
             _this.state = {
                 showButton: false
             };
